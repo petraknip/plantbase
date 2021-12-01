@@ -1,18 +1,40 @@
-
+<!-- 
 <main>
 <h1>Plantbase Overzicht</h1>
 <section>
+
     <article>
-    <h2>{{ plant.name }}</h2>
-    <div><span>id: </span>{{plant.id}}</div>
+    <ul class="plants">
+        <li *ngFor="let plant of plants" [class.selected]="plant === selectedPlant" (click)="onSelect(plant)">
+            <span class="badge">{{plant.id}}</span> {{plant.name}}
+        </li>
+    </ul>
+    </article>
+
+
+
+
+<div *ngIf="selectedPlant">
+    <article>
+    <h2>{{ plants.name }}</h2>
+    <div><span>id: </span>{{plants.id}}</div>
     <div>
         <label for="name">Plantnaam: </label>
         <input id="name" [(ngModel)]="plant.name" placeholder="name">
     </div>
     </article>
+</div>
 
 </section>
 
-</main>
+</main> -->
 
+<h2>Mijn Planten</h2>
+<ul class="plants">
+    <li *ngFor="let plant of plants">
+        <a routerLink="/detail/{{plant.id}}">
+        <span class="badge">{{plant.id}}</span> {{plant.name}}</a>
+    </li>
+</ul>
 
+<app-plant-detail [plant]="selectedPlant"></app-plant-detail>

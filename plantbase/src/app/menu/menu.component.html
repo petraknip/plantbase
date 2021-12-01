@@ -1,0 +1,7 @@
+
+<nav class="plants-menu">
+    <a *ngFor="let plant of plants"
+        routerLink="/detail/{{plant.id}}">
+        {{plant.name}}
+    </a>
+</nav>

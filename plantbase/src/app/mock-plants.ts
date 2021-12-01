@@ -1,6 +1,6 @@
-import { Plant } from './plants';
+import { Plant } from './plant';
 
-export const PLANTS: Plants[] = [
+export const PLANTS: Plant[] = [
   { id: 1, name: 'Plant 1' },
   { id: 2, name: 'Plant 2' },
   { id: 3, name: 'Plant 3' },

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+// import { PLANTS } from '../mock-plants';
 import { Plant } from '../plant';
+import { PlantService } from '../plant.service';
+// import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-plants',
@@ -7,12 +10,26 @@ import { Plant } from '../plant';
   styleUrls: ['./plants.component.scss'],
 })
 export class PlantsComponent implements OnInit {
-  plant: Plant = {
-    id: 1,
-    name: 'Plant 1',
-  };
 
-  constructor() {}
 
-  ngOnInit(): void {}
+  selectedPlant?: Plant;
+  plants: Plant[] = [];
+
+  constructor(
+    private plantService: PlantService,
+    private messageService: MessageService
+  ) {}
+
+  ngOnInit(): void {
+    this.getPlants();
+  }
+
+  onSelect(plant: Plant): void {
+    this.selectedPlant = plant;
+    this.messageService.add(`PlantComponent: Selected plant id=${plant.id}`);
+  }
+
+  getPlants(): void {
+    this.plantService.getPlants().subscribe((plants) => (this.plants = plants));
+  }
 }
