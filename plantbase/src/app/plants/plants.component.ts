@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service';
 // import { PLANTS } from '../mock-plants';
 import { Plant } from '../plant';
 import { PlantService } from '../plant.service';
-// import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-plants',
