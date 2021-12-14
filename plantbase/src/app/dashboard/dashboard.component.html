@@ -1,7 +1,8 @@
-
+<main class="main-container">
 <nav class="plant-dashboard">
-    <a *ngFor="let plant of plants"
-        routerLink="/detail/{{plant.id}}">
+    <a *ngFor="let plant of plants" routerLink="/detail/{{plant.id}}">
         {{plant.name}}
     </a>
 </nav>
+</main>
+
