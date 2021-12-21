@@ -1,27 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { IPlant } from './plant';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-import { Plant } from './plant';
-import { PLANTS } from './mock-plants';
-import { MessageService } from './message.service';
-
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class PlantService {
-  constructor(private messageService: MessageService) {}
+  private _url: string = '/assets/data/plants.json';
 
-  getPlants(): Observable<Plant[]> {
-    const plants = of(PLANTS);
-    this.messageService.add('PlantService: Opgehaalde planten');
-    return plants;
-  }
+  constructor(private http: HttpClient) {}
 
-  getPlant(id: number): Observable<Plant> {
-    // a plant with the specified `id` always exists.
-    // Error handling will be added in the next step.
-    const plant = PLANTS.find((h) => h.id === id)!;
-    this.messageService.add(`PlantService: Opgehaalde planten id=${id}`);
-    return of(plant);
+  getPlants(): Observable<IPlant[]> {
+    return this.http.get<IPlant[]>(this._url);
   }
 }
+

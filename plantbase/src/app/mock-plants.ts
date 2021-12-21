@@ -1,14 +1,36 @@
-import { Plant } from './plant';
+// import { Plant } from './plant';
 
-export const PLANTS: Plant[] = [
-  { id: 1, src: '/assets/images/plants.jpg', name: 'Plant 1' },
-  { id: 2, src: './assets/images/plants.jpg', name: 'Plant 2' },
-  { id: 3, src: './assets/images/plants.jpg', name: 'Plant 3' },
-  { id: 4, src: './assets/images/plants.jpg', name: 'Plant 4' },
-  { id: 5, src: './assets/images/plants.jpg', name: 'Plant 5' },
-  { id: 6, src: './assets/images/plants.jpg', name: 'Plant 6' },
-  { id: 7, src: './assets/images/plants.jpg', name: 'Plant 7' },
-  { id: 8, src: './assets/images/plants.jpg', name: 'Plant 8' },
-  { id: 9, src: './assets/images/plants.jpg', name: 'Plant 9' },
-  { id: 10, src: './assets/images/plants.jpg', name: 'Plant 10' },
-];
+// export const PLANTS: Plant[] = [
+//   {
+//     id: 1,
+//     image: '/assets/images/epipremnum_aureum.jpg',
+//     family: 'Araceae (Aronskelkfamilie)',
+//     latin: 'Epipremnum pinnatum',
+//     dutch: 'Drakenklimop',
+//     specie: 'Aureum',
+//     description: '',
+//     soil: '',
+//     origin:
+//       'Widespread across Southeast Asia, southern China, New Guinea, Melanesia, northern Australia; naturalized in West Indies',
+//     place: 'Veel licht of halfschaduw',
+//     temperature: '',
+//     type: 'klimplant',
+//     water: 'Altijd lichtvochtig en mag niet uitdrogen',
+//   },
+//   {
+//     id: 2,
+//     image: '/assets/images/scindapsus-pictus-trebie.jpg',
+//     family: 'Araceae (Aronskelkfamilie)',
+//     latin: 'Scindapsus Pictus Trebie',
+//     dutch: '',
+//     specie: 'Aureum',
+//     description: '',
+//     soil: '',
+//     origin:
+//       'Widespread across Southeast Asia, southern China, New Guinea, Melanesia, northern Australia; naturalized in West Indies',
+//     place: 'Veel licht of halfschaduw',
+//     temperature: '',
+//     type: 'klimplant',
+//     water: 'Altijd lichtvochtig en mag niet uitdrogen',
+//   },
+// ];

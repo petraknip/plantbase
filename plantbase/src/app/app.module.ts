@@ -4,24 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlantDetailComponent } from './plants/plant-detail/plant-detail.component';
-import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlantsComponent } from './plants/plants.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PlantService } from './plant.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlantsComponent,
     PlantDetailComponent,
-    MessagesComponent,
     DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PlantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

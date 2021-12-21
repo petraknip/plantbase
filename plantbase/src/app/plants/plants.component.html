@@ -3,10 +3,10 @@
 <h2>Overzicht</h2> -->
 <section class="plant-container">
     <div *ngFor="let plant of plants" class="plant-card">
-        <img src="../../assets/images/plants.jpg" alt="mockplant">
+        <img src="{{plant.image}}" alt="mockplant">
         <div class="pb-card-content">
             <a routerLink="/detail/{{plant.id}}">
-            <span>{{plant.id}}</span> {{plant.name}}</a>
+            {{plant.latin}}</a>
         </div>
     </div>
 </section>

@@ -1,10 +1,10 @@
 <div *ngIf="plant">
 
-    <h2>{{plant.name | uppercase}}</h2>
+    <h2>{{plant.family | uppercase}}</h2>
     <div><span>id: </span>{{plant.id}}</div>
     <div>
         <label for="plant-name">Plant naam: </label>
-        <input id="plant-name" [(ngModel)]="plant.name" placeholder="Plantnaam">
+        <input id="plant-name" [(ngModel)]="plant.family" placeholder="Plantnaam">
     </div>
     <button (click)="goBack()">go back</button>
 </div>
