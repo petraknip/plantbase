@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Plant } from '../plant';
+import { IPlant } from '../plant';
 import { PlantService } from '../plant.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { PlantService } from '../plant.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  plants: Plant[] = [];
+  plants: IPlant[] = [];
 
   constructor(private plantService: PlantService) {}
 

@@ -1,19 +1,24 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Plant } from '../../plant';
-
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { IPlant } from 'src/app/plant';
+import { PlantService } from 'src/app/plant.service';
 
-import { PlantService } from '../../plant.service';
 
 @Component({
   selector: 'app-plant-detail',
   templateUrl: './plant-detail.component.html',
   styleUrls: ['./plant-detail.component.scss'],
 })
+
 export class PlantDetailComponent implements OnInit {
-  plant: Plant | undefined;
-  // @Input() plant?: Plant;
+
+  // public plants : IPlant[] = [];
+  // public plants : IPlant[] = [];
+
+  @Input()
+  plant!: IPlant;
+  plantService: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,16 +27,7 @@ export class PlantDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getPlant();
-  }
-
-  getPlant(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.plantService.getPlant(id)
-      .subscribe(plant => this.plant = plant);
-  }
-
-  goBack(): void {
-    this.location.back();
+    this.plantService.getPlants()
+    .subscribe(data => this.plants = data);
   }
 }

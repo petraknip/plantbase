@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
+
 export class PlantService {
   private _url: string = '/assets/data/plants.json';
 
@@ -13,4 +14,3 @@ export class PlantService {
     return this.http.get<IPlant[]>(this._url);
   }
 }
-

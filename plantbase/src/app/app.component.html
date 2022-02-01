@@ -1,13 +1,13 @@
 <div class="container">
-    <h1>{{title}}</h1>
-    <!-- The <router-outlet> tells the router where to display routed views. -->
-    <!-- <router-outlet></router-outlet>-->
-    <router-outlet></router-outlet>
-        <nav class="main-nav">
-            <!-- routerLink attribute -->
-            <a routerLink="/dashboard"><i class="fas fa-home"></i></a>
-            <a routerLink="/plants"><i class="fas fa-leaf"></i></a>
-            <a routerLink="/dashboard"><i class="fas fa-search"></i></a>
-            <a routerLink="/plants"><i class="fas fa-cog"></i></a>
-        </nav>
+  <h1>{{title}}</h1>
+  <!-- The <router-outlet> tells the router where to display routed views. -->
+  <router-outlet></router-outlet>
+  <nav class="main-nav">
+    <!-- routerLink attribute -->
+    <a routerLink="/dashboard"><i class="fas fa-home"></i></a>
+    <a routerLink="/plants"><i class="fas fa-leaf"></i></a>
+    <!-- <a routerLink="/plants"><i class="fas fa-layer-group"></i></a> -->
+    <a routerLink="/dashboard"><i class="fas fa-search"></i></a>
+    <a routerLink="/plants/create/plants-create"><i class="fas fa-plus"></i></a>
+  </nav>
 </div>
